@@ -1,4 +1,4 @@
-let array = ['apple', 'orange', 'banana', 'pear'];
+let array = ['apple', 'orange', 'banana', 'pear', 2, 4, "2"];
 
 const removeFromArray = function(array, ...items) {
     // For each item argument
@@ -6,15 +6,14 @@ const removeFromArray = function(array, ...items) {
             // Use the index of the argument to remove
             let removedIndex = array.indexOf(item);
 
-            if (array[removedIndex] > 0) {
+                console.log(array.indexOf(item));
+                console.log("removedindex: " + removedIndex);
+            if (removedIndex >= 0) {
                 array.splice(removedIndex, 1);
             }
     }
     return array;
 };
-
-console.log(removeFromArray(["butt", 2, 3, 4], "butt", 3));
-
 
 // Do not edit below this line
 module.exports = removeFromArray;
